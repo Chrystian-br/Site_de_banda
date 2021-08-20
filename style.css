@@ -1,0 +1,666 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Lato", sans-serif;
+}
+
+html,body{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.clear{
+    clear: both;
+}
+
+.center{
+    max-width: 800px;
+    width: 100%;
+    margin:0 auto;
+}
+
+/* Cabeçalho */
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    z-index: 999;
+}
+
+header .desktop-menu{
+    float: left;
+    width: 90%;
+}
+
+header .desktop-menu ul{
+    list-style: none;
+    display: flex;
+    position: relative;
+}
+
+header .desktop-menu ul li{
+    padding: 0 25px;
+    cursor: pointer;
+    height: 50px;
+}
+
+header .desktop-menu ul li:hover{
+    background-color: #ccc;
+}
+
+header .desktop-menu ul li:hover a{
+    color: black;
+}
+
+header .desktop-menu ul li a{
+    position: relative;
+    top: 30%;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+header .desktop-menu ul li .more{
+    display: none;
+    position: absolute;
+    left: 400px;
+    top: 50px;
+    background-color: white;
+    box-shadow: 0px 4px 10px 2px rgb(44, 44, 44);
+}
+
+header .desktop-menu ul li .more ul{
+    display: block;
+}
+
+header .desktop-menu ul li .more li{
+    height: 40px;
+}
+
+header .desktop-menu ul li .more li a{
+    color: black;
+    font-size: 13px;
+    top: 25%;
+}
+
+
+header .mobile-menu{
+    display: none;
+}
+
+header .mobile-menu ul{
+    display: none;
+    position: absolute;
+    top:50px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    list-style: none;
+}
+
+header .mobile-menu ul li{
+    padding: 0 25px;
+    cursor: pointer;
+    height: 50px;
+}
+
+header .mobile-menu ul li:hover{
+    background-color: #ccc;
+}
+
+header .mobile-menu ul li:hover a{
+    color: black;
+}
+
+header .mobile-menu ul li a{
+    position: relative;
+    top: 30%;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+header .menu-bttn{
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    color: white;
+    font-size: 20px;
+    cursor:pointer;
+}
+
+header .menu-bttn:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+header .menu-bttn i{
+    position: absolute;
+    top: 15px;
+    right: 15px;  
+}
+
+header .search{
+    float: right;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    text-align: center;
+}
+
+header .search:hover{
+    background-color: red;
+}
+
+header .search i{
+    padding-top: 33.3%;
+    color: white;
+    display: inline-block;
+}
+
+/************************/
+
+/* Turnê Background */
+
+.turne-bg{
+    position: relative;
+    width: 100%;
+    height: calc(50vw + 20px);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top 100px;
+    animation: troca-bg 20s ease-in-out infinite;
+}
+
+.text-turne-bg{
+    position: absolute;
+    bottom:25px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+}
+
+.text-turne-bg h2{
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.text-turne-bg p{
+    font-weight: bold;
+}
+
+@keyframes troca-bg{ /* Animação para trocar o plano de fundo */
+    0%{
+        background-image: url("images/los_angeles_bg.jpg");
+    }
+
+    33.3%{
+        background-image: url('images/new_york_bg.jpg');
+    }
+
+    66.6%{
+        background-image: url('images/chicago_bg.jpg');
+    }
+
+    100%{
+        background-image: url('images/los_angeles_bg.jpg');
+    }
+}
+
+/************************/
+
+/* Sobre */
+
+.sobre{
+    padding: 70px 2%;
+}
+
+.sobre-text{
+    text-align: center;
+}
+
+h2{
+    white-space:pre;
+    padding-bottom: 8px;
+    font-weight: normal;
+    font-size: 26px;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+h3{
+    font-weight: normal;
+    font-size: 16px;
+    font-style: italic;
+    color: rgb(141, 141, 141);
+}
+
+.sobre-text p{
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 13px;
+}
+
+.sobre .artist-container{
+    width: 100%;
+    padding: 30px;
+}
+
+.sobre .artist-container .artist-single{
+    position: relative;
+    width: 33.3%;
+    float: left;
+    border: 12px solid white;
+}
+
+.sobre .artist-container .artist-single p{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.sobre .artist-container .artist-single img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+}
+
+/************************/
+
+/* Janela modal */
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 999;
+}
+
+.modal .tickets{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    width: 96%;
+    max-width: 880px;
+}
+
+.modal .cabecalho-modal{
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    background-color: #009688;
+    color: white;
+}
+
+.modal .cabecalho-modal i{
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.modal .cabecalho-modal h2{
+    display: inline-block;
+    font-size: 30px;
+}
+
+.modal .compra-tickets{
+    padding: 20px;
+}
+
+.modal .compra-tickets p{
+    white-space: pre;
+}
+
+.modal .compra-tickets input{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    margin: 15px 0 20px;
+}
+
+.modal .compra-tickets button{
+    width: 100%;
+    height: 50px;
+    border: 0;
+    color: white;
+    background-color: #009688;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal .rodape-modal{
+    padding: 0 20px 20px;
+}
+
+.modal .rodape-modal button{
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #f44333;
+    border: 0;
+    float: left;
+}
+
+.modal button:hover{
+    color: black;
+    background-color: #ccc;
+}
+
+.modal .rodape-modal span{
+    padding-top: 9px;
+    float: right;
+}
+
+/************************/
+
+
+/* Tour */
+
+.tour{
+    padding: 60px 2%;
+    background-color: black;
+    text-align: center;
+}
+
+.tour h2{
+    color: white;
+}
+
+.tour nav{
+    margin-top: 25px;
+}
+
+.tour nav ul{
+    background-color: white;
+    list-style: none;
+}
+
+.tour nav ul li{
+    text-align: left;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(173, 173, 173);
+    color: rgb(134, 134, 134);
+    white-space: pre;
+    cursor: pointer;
+}
+
+.tour nav ul li:hover{
+    background-color: rgb(238, 238, 238);
+}
+
+.tour nav ul li span{
+    padding: 3px 8px;
+    color: white;
+    background-color: #f44336;
+}
+
+.tour nav ul li:nth-of-type(3) span{
+    float: right;
+    padding: 1px 6px 2px;
+    border-radius: 250px;
+    background-color: black;
+}
+
+.tour-local{
+    width: 100%;
+    padding: 30px 0;
+}
+
+.tour-local-single{
+    width: calc(33.3% - 10px);
+    float: left;
+    background-color: white;
+    margin: 0 7.5px;
+    transition: 0.2s;
+}
+
+.tour-local-single:nth-of-type(1){
+    margin-left: 0;
+}
+
+.tour-local-single:nth-of-type(3){
+    margin-right: -10px;
+}
+
+.img-tour-local-single{
+    width: 100%;
+    padding-top: 70%;
+    background-size: cover;
+}
+
+.tour-local-single:hover{
+    transform: scale(1.1);
+}
+
+.text-tour-local-single{
+    padding: 20px;
+    text-align: left;
+}
+
+.text-tour-local-single span{
+    padding: 20px 0;
+    display: inline-block;
+    color:rgb(134, 134, 134);
+    font-size: 15px;
+}
+
+.text-tour-local-single button{
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+.text-tour-local-single button:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+/************************/
+
+/* Contato */
+
+.contato{
+    padding: 60px 2%;
+    text-align: center;
+}
+
+.contato-text{
+    float: left;
+    width: 50%;
+    text-align: left;
+    padding: 50px 0;
+}
+
+.contato-text p{
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+.contato-text p i{
+    margin-right: 10px;
+}
+
+.contato form{
+    width: 50%;
+    float: right;
+    text-align: left;
+    padding: 50px 0;
+}
+
+.contato .form-wraper{
+    float: left;
+    padding: 2.5px 10px;
+    padding-right: 0;
+}
+
+.contato .form-wraper.w100{
+    width: 100%;
+}
+
+.contato .form-wraper.w50{
+    width: 50%;
+}
+
+.contato .form-wraper input{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.contato form input[type=submit]{
+    float: right;
+    padding: 7px 15px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+.contato form input[type=submit]:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+/************************/
+
+/* Mapa */
+
+.img-map{
+    width: 100%;
+    padding-top: 50%;
+    background-image: url(images/map.jpg);
+    background-size: cover;
+}
+
+/************************/
+
+/* Rodapé */
+
+footer{
+    padding: 60px 2%;
+    text-align: center;
+}
+
+footer i{
+    font-size: 23px;
+    margin: 0 2px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+footer i:hover{
+    opacity: 0.4;
+}
+
+footer p{
+    margin-top: 20px;
+    color:rgb(134, 134, 134);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+footer p a{
+    color: rgb(78, 78, 78);
+}
+
+/************************/
+
+/* Responsivo */
+
+@media screen and (max-width: 680px){
+    header nav.desktop-menu ul li:nth-of-type(1n + 2),
+    header div.search{
+        display: none;
+    }
+
+    header nav.mobile-menu{
+        display: block;
+    }
+
+    header div.menu-bttn{
+        display: block;
+    }
+
+    section.sobre div.artist-container div.artist-single{
+        position: relative;
+        width: 100%;
+        float: none;
+        border: 12px solid white;
+    }
+
+    section.sobre div.artist-container div.artist-single img{
+        width: 80%;
+    }
+
+    section.tour div.tour-local-single{
+        width: 45%;
+        float: left;
+        background-color: white;
+        margin: 10px 2.5%;
+    }
+
+    section.tour div.tour-local-single:hover{
+        transform: scale(1);
+    }
+
+    section.tour div.tour-local-single:nth-of-type(3){
+        margin-right: 0;
+    }
+
+    section.contato div.contato-text,
+    section.contato form{
+        float: none;
+        width: 100%;
+        padding: 40px 0 20px;
+    }
+
+    section.contato div.form-wraper{
+        width: 100%;
+        float: none;
+        padding: 5px 0;
+    }
+
+    section.contato div.form-wraper.w50{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    section.tour div.tour-local-single{
+        width: 100%;
+        float: left;
+        background-color: white;
+        margin: 10px 0;
+    }
+}
+
+/************************/

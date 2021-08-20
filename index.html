@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Venha conhecer nossa banda e comprar ingressos para nossos shows!">
+    <meta name="keywords" content="banda,ingressos,shows,portfolio,tour">
+    <meta name="author" content="Chrystian Coelho">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image-x/png" href="images/banda.ico">
+    <title>Projeto Extra - Banda</title>
+</head>
+<body>
+
+    <header>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="#homeAncor">Home</a></li>
+                <li><a href="#sobreAncor">Band</a></li>
+                <li><a href="#tourAncor">Tour</a></li>
+                <li><a href="#contatoAncor">Contact</a></li>
+                <li class="more-bttn">
+                    <a href="">More <i class="fas fa-caret-down"></i></a>
+                    <nav class="more">
+                        <ul>
+                            <li><a href="">Merchandise</a></li>
+                            <li><a href="">Extra</a></li>
+                            <li><a href="">Midia</a></li>
+                        </ul>
+                    </nav>
+                </li>
+            </ul>
+        </nav> <!--desktop-menu-->
+
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="#sobreAncor">Band</a></li>
+                <li><a href="#tourAncor">Tour</a></li>
+                <li><a href="#contatoAncor">Contact</a></li>
+            </ul>
+        </nav> <!--mobile-menu-->
+
+        <div class="menu-bttn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="search">
+            <i class="fas fa-search"></i>
+        </div> <!--search-->
+        <div class="clear"></div>
+    </header>
+
+    <section class="turne-bg" id="homeAncor">
+        <div class="text-turne-bg">
+            <h2>Los Angeles</h2>
+            <p>We had the best time playing at Venice Beach!</p>
+        </div> <!--text-turne-bg-->
+    </section> <!--turne-bg-->
+
+    <section class="sobre" id="sobreAncor">
+        <div class="center">
+            <div class="sobre-text">
+                <h2>T H E   B A N D</h2>
+                <h3>We love music</h3>
+                <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing 
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div> <!--sobre-text-->
+
+            <div class="artist-container">
+                <div class="artist-single">
+                    <p>Name</p>
+                    <img src="images/artist.jpg">
+                </div> <!--artist-single-->
+                <div class="artist-single">
+                    <p>Name</p>
+                    <img src="images/artist.jpg">
+                </div> <!--artist-single-->
+                <div class="artist-single">
+                    <p>Name</p>
+                    <img src="images/artist.jpg">
+                </div> <!--artist-single-->
+            </div> <!--artist-container-->
+            <div class="clear"></div>
+        </div> <!--center-->
+    </section> <!--sobre-->
+
+    <section class="modal">
+        <div class="tickets">
+            <div class="cabecalho-modal">
+                <i class="fa fa-suitcase w3-margin-right"></i>
+                <h2>T i c k e t s</h2>
+            </div> <!--cabecalho-modal-->
+            <div class="compra-tickets">
+                <p><i class="fa fa-shopping-cart"></i>   Tickets, $15 per person</p>
+                <input type="number" name="quantidade" min="1" placeholder="How many?" required>
+
+                <p><i class="fa fa-user"></i>   Send to</p>
+                <input type="email" name="email" placeholder="Enter your best email" required>
+
+                <button>PAY <i class="fa fa-check"></i></button>
+            </div> <!--compra-tickets-->
+            <div class="rodape-modal">
+                <button>Close <i class="fa fa-remove"></i></button>
+                <span>Need <a href="">help?</a></span>
+                <div class="clear"></div>
+            </div> <!--rodape-modal-->
+        </div> <!--tickets-->
+    </section> <!--modal-->
+
+    <section class="tour" id="tourAncor">
+        <div class="center">
+            <h2>T O U R   D A T E S</h2>
+            <h3>Remember do book your tickets!</h3>
+
+            <nav class="meses-tour">
+                <ul>
+                    <li>September     <span>Sold out</span></li>
+                    <li>October      <span>Sold out</span></li>
+                    <li>November <span>3</span></li>
+                    <div class="clear"></div>
+                </ul>
+            </nav> <!--meses-tour-->
+
+            <div class="tour-local">
+                <div class="tour-local-single">
+                    <div style="background-image: url('images/newyork_tour.jpg')" class="img-tour-local-single"></div>
+                    <div class="text-tour-local-single">
+                        <p><b>New York</b></p>
+                        <span>Fri 27 Nov 2021</span>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button>Buy Tickets</button>
+                    </div>
+                </div> <!--tour-local-single-->
+                <div class="tour-local-single">
+                    <div style="background-image: url('images/paris_tour.jpg')" class="img-tour-local-single"></div>
+                    <div class="text-tour-local-single">
+                        <p><b>Paris</b></p>
+                        <span>Fri 28 Nov 2021</span>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button>Buy Tickets</button>
+                    </div>
+                </div> <!--tour-local-single-->
+                <div class="tour-local-single">
+                    <div style="background-image: url('images/sanfrancisco_tour.jpg')" class="img-tour-local-single"></div>
+                    <div class="text-tour-local-single">
+                        <p><b>San Francisco</b></p>
+                        <span>Fri 29 Nov 2021</span>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button>Buy Tickets</button>
+                    </div>
+
+                    <!--Adicionar um slick slider (com plugin) no tour-local-->
+                    <!--Adicionar opções de locais para compra de ingressos nos meses de setembro e outubro-->
+                    
+                </div> <!--tour-local-single-->
+            </div> <!--tour-local-->
+            <div class="clear"></div>
+        </div> <!--center-->
+    </section> <!--tour-->
+
+    <section class="contato" id="contatoAncor">
+        <div class="center">
+            <h2>C O N T A C T</h2>
+            <h3>Fan? Drop a note!</h3>
+
+            <div class="contato-text">
+                <p><i class="fas fa-map-marker-alt"></i> Chicago, US</p>
+                <p><i class="fas fa-phone-alt"></i>+00 151515</p>
+                <p><i class="fas fa-envelope"></i>contact@mail.com</p>
+            </div> <!--contato-text-->
+
+            <form>
+                <div class="form-wraper w50">
+                    <input type="text" name="nome" placeholder="Name" required>
+                </div>
+                <div class="form-wraper w50">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-wraper w100">
+                    <input type="text" name="mensagem" placeholder="Message" required>
+                </div>
+                <input type="submit" name="enviar" value="SEND">
+            </form>
+            <div class="clear"></div>
+        </div> <!--center-->
+    </section> <!--contato-->
+
+    <div class="img-map"></div>
+
+    <footer>
+        <div class="center">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-snapchat"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <p>Powered by <a target="_blank" href="http://w3schools.com">w3.css</a><br>Recode by <a target="_blank" href="https://github.com/Chrystian-br">Chrystian-br</a></p>
+        </div> <!--center-->
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="https://kit.fontawesome.com/cb240737b9.js" crossorigin="anonymous"></script>
+    <script src="js/functions.js"></script>
+</body>
+</html>
