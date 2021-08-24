@@ -12,6 +12,27 @@ $(function(){
     })
 
 
+    // Abrir a lista de tour do mês
+    abrirListaTour();
+    function abrirListaTour(){
+
+        $('.tour-mes').eq(0).css('display','block');
+        $('.meses-tour li').eq(0).css('background-color','rgb(50,50,50)').css('color','white');
+
+        $('.meses-tour li').click(function(){
+            var mesSplit = $(this).text().split(" ");
+            
+            $('.meses-tour li').css('background-color','white').css('color','rgb(134,134,134)');
+            $(this).css('background-color','rgb(50,50,50)').css('color','white');
+
+            if($(`.tour-mes.${mesSplit[0]}`).css('display') == 'none'){
+                $(`.tour-mes`).slideUp(1000,function(){});
+                $(`.tour-mes.${mesSplit[0]}`).slideDown(1000);
+            }
+        })
+    }
+    
+    
     // Janela modal
     $('body').click(function(){
         $('.tickets').slideUp(200, function(){
