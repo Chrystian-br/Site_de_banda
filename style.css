@@ -399,48 +399,42 @@ h3{
 .tour nav ul li{
     text-align: left;
     padding: 10px 20px;
-    border-bottom: 1px solid rgb(173, 173, 173);
     color: rgb(134, 134, 134);
-    white-space: pre;
     cursor: pointer;
 }
 
-.tour nav ul li:hover{
-    background-color: rgb(238, 238, 238);
-}
-
-.tour nav ul li span{
-    padding: 3px 8px;
-    color: white;
-    background-color: #f44336;
-}
-
-.tour nav ul li:nth-of-type(3) span{
+.tour nav ul span{
     float: right;
     padding: 1px 6px 2px;
     border-radius: 250px;
     background-color: black;
+    color: white;
+}
+
+.tour-mes{
+    display: none;
 }
 
 .tour-local{
     width: 100%;
     padding: 30px 0;
+    text-align: center
 }
 
 .tour-local-single{
     width: calc(33.3% - 10px);
-    float: left;
+    display: inline-block;
     background-color: white;
-    margin: 0 7.5px;
+    margin: 0 6px;
     transition: 0.2s;
 }
 
 .tour-local-single:nth-of-type(1){
-    margin-left: 0;
+    margin-left: -15px;
 }
 
 .tour-local-single:nth-of-type(3){
-    margin-right: -10px;
+    margin-right: -15px;
 }
 
 .img-tour-local-single{
